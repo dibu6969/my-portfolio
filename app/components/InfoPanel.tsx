@@ -22,7 +22,7 @@ export default function InfoPanel() {
   };
 
   return (
-    <div className="fixed top-6 right-6 z-10">
+    <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-10">
       <div className="flex items-center space-x-6">
         {sections.map((section, index) => (
           <motion.button
