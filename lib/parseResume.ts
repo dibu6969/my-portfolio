@@ -67,7 +67,7 @@ export async function parseResumeFromPublic(filename = "resume.pdf"): Promise<Pa
     const inferred = inferContact(text);
 
     return { rawText: text, sections, inferred };
-  } catch (err) {
+  } catch {
     return null;
   }
 }

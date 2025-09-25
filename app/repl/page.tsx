@@ -8,12 +8,12 @@ export default function ReplPage() {
 
   function run() {
     try {
-      // eslint-disable-next-line no-new-func
       const fn = new Function(code);
       const result = fn();
       setOutput(String(result));
-    } catch (e: any) {
-      setOutput('Error: ' + e.message);
+    } catch (e: unknown) {
+      const error = e as Error;
+      setOutput('Error: ' + error.message);
     }
   }
 

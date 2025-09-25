@@ -12,8 +12,6 @@ export default async function Home() {
   const name = PROFILE.name || resume.inferred.name || "Your Name";
   const email = PROFILE.email || resume.inferred.email || "you@example.com";
   const linkedin = PROFILE.links?.linkedin || resume.inferred.links?.linkedin;
-  const experience = resume.sections.experience || [];
-  const skills = resume.sections.skills || [];
 
   return (
     <main className="min-h-screen">
@@ -32,10 +30,10 @@ export default async function Home() {
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">About Me</h2>
           <div className="text-lg md:text-xl leading-relaxed" style={{ color: '#f5f5dc' }}>
             <p className="mb-6">
-              I'm a driven finance and international business student at Northeastern University, passionate about bridging the gap between traditional finance and innovative technology. Born in Miami with strong connections to Mexico, I've gained valuable experience contributing to a six-figure sneaker business and supporting wealth management operations for Brazil-focused investment mandates.
+              I&apos;m a driven finance and international business student at Northeastern University, passionate about bridging the gap between traditional finance and innovative technology. Born in Miami with strong connections to Mexico, I&apos;ve gained valuable experience contributing to a six-figure sneaker business and supporting wealth management operations for Brazil-focused investment mandates.
             </p>
             <p>
-              Beyond the numbers and market analysis, I'm a dedicated Brazilian Jiu-Jitsu and MMA practitioner who applies the discipline, patience, and strategic thinking from martial arts to my approach in finance. I believe that combining technical skills with personal growth creates the foundation for meaningful impact in both business and community development.
+              Beyond the numbers and market analysis, I&apos;m a dedicated Brazilian Jiu-Jitsu and MMA practitioner who applies the discipline, patience, and strategic thinking from martial arts to my approach in finance. I believe that combining technical skills with personal growth creates the foundation for meaningful impact in both business and community development.
             </p>
           </div>
         </div>
@@ -229,7 +227,7 @@ export default async function Home() {
           </div>
           <div className="mt-12">
             <p className="text-lg" style={{ color: '#f5f5dc' }}>
-              There's always something to be grateful for.
+              There&apos;s always something to be grateful for.
             </p>
           </div>
         </div>
