@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Sora, SUSE } from "next/font/google";
+import { Geist, Geist_Mono, Sora, Space_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,8 +17,14 @@ const sora = Sora({
   subsets: ["latin"],
 });
 
-const suse = SUSE({
-  variable: "--font-suse",
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -35,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} ${suse.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} ${spaceMono.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>
