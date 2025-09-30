@@ -259,4 +259,57 @@ body, p, div, span, h1, h2, h3, h4, h5, h6, a, li, td, th {
   }
 }
 
+/* Daft Punk inspired effects */
+@keyframes neonGlow {
+  0%, 100% { 
+    text-shadow: 
+      0 0 5px #00ffff,
+      0 0 10px #00ffff,
+      0 0 15px #00ffff,
+      0 0 20px #00ffff;
+  }
+  50% { 
+    text-shadow: 
+      0 0 2px #00ffff,
+      0 0 5px #00ffff,
+      0 0 8px #00ffff,
+      0 0 12px #00ffff,
+      0 0 15px #ff00ff;
+  }
+}
+
+@keyframes cyberPulse {
+  0%, 100% { 
+    border-color: #00ffff;
+    box-shadow: 0 0 5px #00ffff;
+  }
+  50% { 
+    border-color: #ff00ff;
+    box-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff;
+  }
+}
+
+@keyframes matrixRain {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.neon-text {
+  animation: neonGlow 2s ease-in-out infinite;
+}
+
+.cyber-border {
+  animation: cyberPulse 3s ease-in-out infinite;
+}
+
+/* Daft Punk color scheme variables */
+:root {
+  --daft-cyan: #00ffff;
+  --daft-magenta: #ff00ff;
+  --daft-gold: #ffd700;
+  --daft-silver: #c0c0c0;
+}
+
 /* Hover effects removed - keeping original styling */

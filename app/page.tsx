@@ -3,6 +3,9 @@ import { PROFILE } from "@/lib/profile";
 import { SKILLS, EXPERIENCE } from "./projects/data/resume";
 import AnimatedName from "./components/AnimatedName";
 import InfoPanel from "./components/InfoPanel";
+import DaftPunkEasterEgg from "./components/DaftPunkEasterEgg";
+import MusicVisualizer from "./components/MusicVisualizer";
+import RobotVoiceEffect from "./components/RobotVoiceEffect";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -16,6 +19,8 @@ export default async function Home() {
   return (
     <main className="min-h-screen">
       <InfoPanel />
+      <DaftPunkEasterEgg />
+      <MusicVisualizer />
       
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center p-6 relative">
@@ -27,7 +32,9 @@ export default async function Home() {
       {/* About Me Section */}
       <section id="about" className="py-24 flex items-center justify-center p-6" style={{ fontFamily: 'var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+            <RobotVoiceEffect>About Me</RobotVoiceEffect>
+          </h2>
           <div className="text-lg md:text-xl leading-relaxed" style={{ color: '#f5f5dc' }}>
             <p className="mb-6">
               I&apos;m a driven finance and international business student at Northeastern University, passionate about bridging the gap between traditional finance and innovative technology. Born in Miami with strong connections to Mexico, I&apos;ve gained valuable experience contributing to a six-figure sneaker business and supporting wealth management operations for Brazil-focused investment mandates.
@@ -42,7 +49,9 @@ export default async function Home() {
       {/* Experience Section */}
       <section id="experience" className="py-24 flex items-center justify-center p-6" style={{ fontFamily: 'var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
         <div className="mx-auto max-w-6xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+            <RobotVoiceEffect>Experience</RobotVoiceEffect>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {EXPERIENCE.map((exp, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 h-full flex flex-col">
@@ -70,7 +79,9 @@ export default async function Home() {
       {/* Skills Section */}
       <section id="skills" className="py-24 flex items-center justify-center p-6" style={{ fontFamily: 'var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">Skills</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+            <RobotVoiceEffect>Skills</RobotVoiceEffect>
+          </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {SKILLS.map((skill, index) => (
               <div 
@@ -87,7 +98,9 @@ export default async function Home() {
       {/* Interests Section */}
       <section id="interests" className="py-24 flex items-center justify-center p-6" style={{ fontFamily: 'var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">Interests</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+            <RobotVoiceEffect>Interests</RobotVoiceEffect>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-4">Brazilian Jiu-Jitsu</h3>
@@ -120,7 +133,9 @@ export default async function Home() {
       {/* Languages Section */}
       <section id="languages" className="py-24 flex items-center justify-center p-6" style={{ fontFamily: 'var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">Languages</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+            <RobotVoiceEffect>Languages</RobotVoiceEffect>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-4">English</h3>
@@ -156,7 +171,9 @@ export default async function Home() {
       {/* Resume Section */}
       <section id="resume" className="py-24 flex items-center justify-center p-6" style={{ fontFamily: 'var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">Resume</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+            <RobotVoiceEffect>Resume</RobotVoiceEffect>
+          </h2>
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700 max-w-md mx-auto">
             <div className="mb-6">
               <svg className="w-16 h-16 text-yellow-300 mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20">
@@ -184,7 +201,9 @@ export default async function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-24 flex items-center justify-center p-6" style={{ fontFamily: 'var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}>
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">Contact</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+            <RobotVoiceEffect>Contact</RobotVoiceEffect>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a 
               href={`mailto:${email}`}
@@ -228,6 +247,11 @@ export default async function Home() {
           <div className="mt-12">
             <p className="text-lg" style={{ color: '#f5f5dc' }}>
               There&apos;s always something to be grateful for.
+            </p>
+            <p className="text-sm mt-4 italic" style={{ color: '#888' }}>
+              <RobotVoiceEffect enableEffect={false}>
+                "Work it harder, make it better" — Daft Punk
+              </RobotVoiceEffect>
             </p>
           </div>
         </div>

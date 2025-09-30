@@ -6,8 +6,10 @@ import FishAnimation from './FishAnimation';
 
 export default function AnimatedName({ name }: { name: string }) {
   const letters = Array.from(name);
-  const quote = "'Just keep swimming'";
-  const quoteLetters = Array.from(quote);
+  // Randomly choose between the original quote and a Daft Punk quote
+  const quotes = ["'Just keep swimming'", "'Harder, better, faster, stronger'"];
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  const quoteLetters = Array.from(randomQuote);
   const totalDuration = 5; // seconds
   const perChar = totalDuration / Math.max(letters.length, 1);
   const [index, setIndex] = useState(0);
