@@ -16,8 +16,8 @@ export default async function Home() {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-blue-700/20 rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
@@ -73,7 +73,7 @@ export default async function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">About Me</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-800 mx-auto rounded-full" />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -112,7 +112,7 @@ export default async function Home() {
                         <span className="text-gray-400">90%</span>
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full w-[90%]" />
+                        <div className="h-full bg-gradient-to-r from-blue-600 to-blue-800 rounded-full w-[90%]" />
                       </div>
                     </div>
                     
@@ -122,7 +122,7 @@ export default async function Home() {
                         <span className="text-gray-400">85%</span>
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full w-[85%]" />
+                        <div className="h-full bg-gradient-to-r from-blue-500 to-blue-700 rounded-full w-[85%]" />
                       </div>
                     </div>
                     
@@ -132,7 +132,7 @@ export default async function Home() {
                         <span className="text-gray-400">80%</span>
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2">
-                        <div className="h-full bg-gradient-to-r from-pink-500 to-pink-600 rounded-full w-[80%]" />
+                        <div className="h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full w-[80%]" />
                       </div>
                     </div>
                   </div>
@@ -150,14 +150,14 @@ export default async function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Experience</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {EXPERIENCE.map((exp, index) => (
               <div key={index} className="modern-card p-6 hover-lift">
                 <div className="mb-4">
-                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full text-sm font-medium text-white mb-4">
+                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-full text-sm font-medium text-white mb-4">
                     {exp.start} - {exp.end}
                 </div>
                   
@@ -171,7 +171,7 @@ export default async function Home() {
                   <ul className="space-y-3">
                   {exp.bullets.map((bullet, bulletIndex) => (
                       <li key={bulletIndex} className="text-gray-300 leading-relaxed flex items-start">
-                        <span className="text-purple-400 mr-3 mt-1 font-bold">•</span>
+                        <span className="text-blue-400 mr-3 mt-1 font-bold">•</span>
                       {bullet}
                     </li>
                   ))}
@@ -190,7 +190,7 @@ export default async function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Skills & Expertise</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-pink-500 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -215,7 +215,7 @@ export default async function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Interests & Passions</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-orange-500 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full" />
             </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -224,25 +224,25 @@ export default async function Home() {
                 title: "Brazilian Jiu-Jitsu",
                 description: "Training in the art of ground fighting, learning discipline, patience, and the importance of technique over strength.",
                 icon: "🥋",
-                gradient: "from-red-500 to-orange-500"
+                gradient: "from-blue-600 to-blue-800"
               },
               {
                 title: "Artificial Intelligence",
                 description: "Exploring the latest developments in AI, machine learning, and how these technologies can solve real-world problems.",
                 icon: "🤖",
-                gradient: "from-blue-500 to-cyan-500"
+                gradient: "from-blue-500 to-blue-700"
               },
               {
                 title: "Product Design",
                 description: "Creating user-centered solutions that bridge the gap between technology and human needs.",
                 icon: "🎨",
-                gradient: "from-purple-500 to-pink-500"
+                gradient: "from-blue-400 to-blue-600"
               },
               {
                 title: "Entrepreneurship",
                 description: "Building and scaling businesses, learning from failures, and turning ideas into reality.",
                 icon: "🚀",
-                gradient: "from-green-500 to-emerald-500"
+                gradient: "from-blue-700 to-blue-900"
               }
             ].map((interest, index) => (
               <div
@@ -274,7 +274,7 @@ export default async function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Languages</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-800 mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -341,11 +341,11 @@ export default async function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Resume</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-800 mx-auto rounded-full" />
           </div>
 
           <div className="modern-card p-8 md:p-12 text-center hover-lift group">
-            <div className="w-24 h-24 mx-auto bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center text-4xl text-white mb-8">
+            <div className="w-24 h-24 mx-auto bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center text-4xl text-white mb-8">
               📄
             </div>
 
@@ -383,7 +383,7 @@ export default async function Home() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Let's Connect</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-blue-800 mx-auto rounded-full" />
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -393,7 +393,7 @@ export default async function Home() {
                 value: email,
                 icon: "📧",
                 href: `mailto:${email}`,
-                gradient: "from-blue-500 to-cyan-500",
+                gradient: "from-blue-500 to-blue-700",
                 description: "Let's start a conversation"
               },
               {
@@ -401,7 +401,7 @@ export default async function Home() {
                 value: "305-699-9713",
                 icon: "📱",
                 href: "tel:305-699-9713",
-                gradient: "from-green-500 to-emerald-500",
+                gradient: "from-blue-600 to-blue-800",
                 description: "Call or text anytime"
               },
               {
@@ -409,7 +409,7 @@ export default async function Home() {
                 value: "Connect with me",
                 icon: "💼",
                 href: linkedin || "",
-                gradient: "from-indigo-500 to-purple-500",
+                gradient: "from-blue-700 to-blue-900",
                 description: "Professional networking"
               }
             ].map((method, index) => (
