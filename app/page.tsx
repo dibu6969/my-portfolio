@@ -13,52 +13,126 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen">
+      {/* Terminal Navigation */}
+      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-black/80 backdrop-blur-md rounded-lg px-4 py-2 border border-blue-500/30 shadow-lg terminal-window">
+        <div className="flex items-center space-x-1 md:space-x-2">
+          <span className="terminal-prompt text-xs">~/portfolio$</span>
+          {["about", "experience", "skills", "interests", "languages", "resume", "contact"].map((sectionName, index) => (
+            <a
+              key={sectionName}
+              href={`#${sectionName}`}
+              className="px-2 py-1 rounded text-xs md:text-sm font-mono transition-all duration-300 text-blue-400 hover:text-blue-300 hover:bg-blue-500/20 animate-slide-in-code"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {sectionName}
+            </a>
+          ))}
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-blue-700/20 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-blue-700/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+          
+          {/* Matrix-style binary rain */}
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute binary-text animate-matrix-rain"
+                style={{
+                  left: `${i * 5}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${3 + Math.random() * 2}s`
+                }}
+              >
+                {Math.random() > 0.5 ? '1' : '0'}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
           <div className="mb-8">
-            <p className="text-lg md:text-xl text-gray-300 font-light tracking-wide">
-              Hello, I'm
+            <p className="text-lg md:text-xl text-gray-300 font-light tracking-wide animate-slide-in-code" style={{ animationDelay: '0.2s' }}>
+              <span className="terminal-prompt">$ </span>
+              <span className="terminal-text">Hello, I'm</span>
             </p>
           </div>
 
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">{name}</span>
+            <span className="gradient-text name-glow animate-code-glow typewriter-cursor animate-blink-cursor">
+              {name}
+            </span>
           </h1>
 
           <div className="mb-12">
-            <p className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed">
-              Finance & International Business Student at{' '}
-              <span className="gradient-text-secondary font-medium">Northeastern University</span>
+            <p className="text-xl md:text-2xl text-gray-300 font-light max-w-3xl mx-auto leading-relaxed animate-slide-in-code" style={{ animationDelay: '0.4s' }}>
+              <span className="code-syntax">const</span> <span className="terminal-text">profession</span> <span className="code-syntax">=</span> <span className="code-string">"Finance & International Business Student"</span><span className="code-syntax">;</span>
+              <br />
+              <span className="code-syntax">const</span> <span className="terminal-text">university</span> <span className="code-syntax">=</span> <span className="code-string">"Northeastern University"</span><span className="code-syntax">;</span>
             </p>
           </div>
 
           <div className="mb-16">
-            <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Entrepreneur, Brazilian Jiu-Jitsu practitioner, and builder passionate about bridging 
-              traditional finance with innovative technology. Exploring the intersection of business, 
-              technology, and personal growth.
+            <p className="text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed animate-slide-in-code" style={{ animationDelay: '0.6s' }}>
+              <span className="code-comment">// A passionate entrepreneur, BJJ practitioner, and builder</span>
+              <br />
+              <span className="code-syntax">const</span> <span className="terminal-text">passions</span> <span className="code-syntax">=</span> <span className="code-syntax">[</span>
+              <br />
+              <span className="code-string ml-4">"Entrepreneurship"</span><span className="code-syntax">,</span>
+              <br />
+              <span className="code-string ml-4">"Brazilian Jiu-Jitsu"</span><span className="code-syntax">,</span>
+              <br />
+              <span className="code-string ml-4">"MMA"</span><span className="code-syntax">,</span>
+              <br />
+              <span className="code-string ml-4">"Innovative Technology"</span>
+              <br />
+              <span className="code-syntax">]</span><span className="code-syntax">;</span>
             </p>
+          </div>
+
+          {/* Terminal Window */}
+          <div className="terminal-window max-w-2xl mx-auto mb-12 animate-slide-in-code" style={{ animationDelay: '0.8s' }}>
+            <div className="flex items-center mb-4">
+              <div className="flex space-x-2">
+                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              </div>
+              <div className="ml-4 text-sm text-gray-400">emilio@portfolio:~$</div>
+            </div>
+            <div className="space-y-2">
+              <div className="terminal-prompt">$ whoami</div>
+              <div className="terminal-output animate-terminal-blink">Emilio Dibildox</div>
+              <div className="terminal-prompt">$ cat skills.txt</div>
+              <div className="terminal-output">
+                <span className="code-syntax">Finance</span> | <span className="code-syntax">Business</span> | <span className="code-syntax">Technology</span>
+              </div>
+              <div className="terminal-prompt">$ ls interests/</div>
+              <div className="terminal-output">
+                bjj/ mma/ entrepreneurship/ innovation/
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
               href="#about"
-              className="btn-primary px-8 py-4 text-lg font-semibold rounded-xl hover-glow"
+              className="btn-primary px-8 py-4 text-lg font-semibold rounded-xl hover-glow animate-slide-in-code"
+              style={{ animationDelay: '1s' }}
             >
-              Explore My Story
+              <span className="terminal-prompt">$ </span>Explore My Story
             </a>
             
             <a
               href="#contact"
-              className="modern-card px-8 py-4 text-lg font-semibold text-white hover-glow"
+              className="modern-card px-8 py-4 text-lg font-semibold text-white hover-glow animate-slide-in-code"
+              style={{ animationDelay: '1.2s' }}
             >
-              Get In Touch
+              <span className="terminal-prompt">$ </span>Get In Touch
             </a>
           </div>
         </div>
@@ -66,7 +140,25 @@ export default async function Home() {
 
       {/* About Section */}
       <section id="about" className="section-padding relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-purple-500/10 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-l from-blue-500/10 to-transparent rounded-full blur-3xl" />
+        
+        {/* Floating binary elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(15)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute binary-text animate-binary-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 4}s`,
+                animationDuration: `${4 + Math.random() * 2}s`
+              }}
+            >
+              {Math.random() > 0.5 ? '1' : '0'}
+            </div>
+          ))}
+        </div>
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
@@ -155,10 +247,10 @@ export default async function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {EXPERIENCE.map((exp, index) => (
-              <div key={index} className="modern-card p-6 hover-lift">
+              <div key={index} className="modern-card p-6 hover-lift animate-slide-in-code" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="mb-4">
-                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-full text-sm font-medium text-white mb-4">
-                    {exp.start} - {exp.end}
+                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-blue-600/20 to-blue-800/20 rounded-full text-sm font-medium text-white mb-4 font-mono">
+                    <span className="code-syntax">{exp.start}</span> - <span className="code-syntax">{exp.end}</span>
                 </div>
                   
                   <h3 className="text-xl font-bold text-white mb-2">
@@ -197,10 +289,13 @@ export default async function Home() {
             {SKILLS.map((skill, index) => (
               <div 
                 key={skill}
-                className="modern-card p-6 text-center hover-lift"
+                className="modern-card p-6 text-center hover-lift animate-slide-in-code"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-white font-medium">
+                  <span className="code-syntax">{`<`}</span>
                   {skill}
+                  <span className="code-syntax">{`/>`}</span>
                 </div>
               </div>
             ))}
