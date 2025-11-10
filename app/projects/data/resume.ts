@@ -7,39 +7,51 @@ export type Experience = {
     bullets: string[];
   };
   
-  export type Project = {
+export type Project = {
     title: string;
     summary: string;
     href?: string;
     tags?: string[];
+    status?: "Active" | "Completed" | "Live" | "In Progress";
   };
   
   export const EXPERIENCE: Experience[] = [
+    { company: "Onda", role: "Founder & Product Lead", start: "Oct 2025", end: "Present",
+      bullets: [
+        "Launched a verified student ticket marketplace replacing fragmented WhatsApp groups",
+        "Shipped MVP with React, Supabase RLS, and Stripe escrow for instant payouts",
+        "Instrumented analytics, support playbooks, and compliance checkpoints from day one"
+      ] },
     { company: "GWM Partners", role: "Wealth Management Intern", start: "May 2025", end: "Jun 2025",
       bullets: [
-        "Supported investment professionals on Brazil focused mandates by analyzing client portfolios, preparing research briefs, and participating in strategy sessions with asset managers and portfolio specialists",
-        "Attended client meetings and industry events to track market dynamics and evaluate cross border investment opportunities, strengthening relationship management, and communication skills"
+        "Analyzed Brazil-focused client portfolios to surface allocation and risk insights",
+        "Built research briefs for strategy sessions with asset managers and specialists",
+        "Tracked market catalysts, keeping advisors and clients aligned on cross-border moves"
       ] },
     { company: "Limitless Shoes", role: "Finance Manager", start: "Mar 2020", end: "Nov 2022",
       bullets: [
-        "Oversaw budgeting, forecasting, and profit analysis for a six-figure revenue sneaker and apparel business, implementing cost control measures that reduced expenses",
-        "Streamlined inventory strategies and optimized pricing models maximizing margins and supporting a sustained growth rate",
-        "Scaled operations through data driven decision making and financial planning"
+        "Led budgeting, forecasting, and profitability reviews for a consistent six-figure revenue brand",
+        "Optimized inventory turns and pricing levers to grow margins and sell-through",
+        "Scaled operations with dashboards that steered purchasing, marketing, and staffing"
       ] },
     { company: "Acapella", role: "Small Business Owner", start: "Jun 2020", end: "Aug 2020",
       bullets: [
-        "Launched a curbside pop-up shop, selling 300+ t-shirts from an emerging Mexican apparel startup I introduced to the U.S. market",
-        "Donated part of my proceeds to support unemployed community members, combining social impact with commercial success"
+        "Sold 300+ shirts via a curbside pop-up shop promoting a Mexican apparel startup",
+        "Donated proceeds to families facing unemployment, blending social impact with profit"
       ] },
   ];
   
   export const PROJECTS: Project[] = [
-    { title: "Triathlon Race Aggregator",
-      summary: "Find and compare triathlon races.",
-      href: "#", tags: ["Next.js", "Supabase"] },
+    { title: "Onda",
+      summary: "Student ticket marketplace that verifies users and consolidates buying, selling, chat, payments, and transfers in one place to replace fragmented WhatsApp groups.",
+      tags: ["React", "Vite", "Supabase", "Stripe"],
+      status: "Active"
+    },
     { title: "Limitless Shoes",
       summary: "Sneaker resale analytics with trends.",
-      href: "#", tags: ["Next.js", "Charts"] },
+      tags: ["Next.js", "Charts"],
+      status: "Completed"
+    },
   ];
   
   export const SKILLS = [

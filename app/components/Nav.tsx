@@ -14,11 +14,16 @@ export default function Nav() {
       <nav className="mx-auto max-w-4xl px-6 h-14 flex items-center justify-between">
         <a href="#top" className="font-semibold">ED</a>
         <div className="flex items-center gap-4 text-sm">
-          <a href="#about" className="hover:underline">About</a>
-          <a href="#experience" className="hover:underline">Experience</a>
-          <a href="#projects" className="hover:underline">Projects</a>
-          <a href="#skills" className="hover:underline">Skills</a>
-          <a href="#contact" className="hover:underline">Contact</a>
+          {[
+            { label: "About", href: "#about" },
+            { label: "Experience", href: "#experience" },
+            { label: "Skills", href: "#skills" },
+            { label: "Contact", href: "#contact" },
+          ].map((link) => (
+            <a key={link.label} href={link.href} className="hover:underline">
+              {link.label}
+            </a>
+          ))}
         </div>
       </nav>
       <div className="h-0.5 bg-gradient-to-r from-blue-500 via-sky-400 to-blue-600" />
